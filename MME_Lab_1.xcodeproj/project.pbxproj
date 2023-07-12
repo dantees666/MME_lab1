@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0E74BD29E12E2600063419 /* CriteriaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74BC29E12E2600063419 /* CriteriaResult.swift */; };
+		AA0E74BF29E1554000063419 /* Optimist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74BE29E1554000063419 /* Optimist.swift */; };
+		AA0E74C129E1805500063419 /* Bayes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C029E1805500063419 /* Bayes.swift */; };
+		AA0E74C329E27A8700063419 /* Laplas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C229E27A8700063419 /* Laplas.swift */; };
+		AA0E74C529E27E6600063419 /* Gurvic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C429E27E6600063419 /* Gurvic.swift */; };
+		AA0E74C729E2837000063419 /* Savidgh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C629E2837000063419 /* Savidgh.swift */; };
+		AA0E74CB29E3CF1000063419 /* SaddlePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */; };
+		AA7328AC29DFBC6A007ABE02 /* ProbabilitiesInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328AB29DFBC6A007ABE02 /* ProbabilitiesInputView.swift */; };
+		AA7328AE29E06BC3007ABE02 /* InputMatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328AD29E06BC3007ABE02 /* InputMatrixViewController.swift */; };
+		AA7328B229E119F6007ABE02 /* MatrixInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328B129E119F6007ABE02 /* MatrixInputView.swift */; };
 		AA96FE0629DEBFB9006F3959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0529DEBFB9006F3959 /* AppDelegate.swift */; };
 		AA96FE0829DEBFB9006F3959 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */; };
-		AA96FE0A29DEBFB9006F3959 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0929DEBFB9006F3959 /* ViewController.swift */; };
-		AA96FE0D29DEBFB9006F3959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA96FE0B29DEBFB9006F3959 /* Main.storyboard */; };
+		AA96FE0A29DEBFB9006F3959 /* ParamsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0929DEBFB9006F3959 /* ParamsInputViewController.swift */; };
 		AA96FE0F29DEBFBA006F3959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */; };
-		AA96FE1229DEBFBA006F3959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA96FE1029DEBFBA006F3959 /* LaunchScreen.storyboard */; };
+		AA96FE1A29DEC2B0006F3959 /* CriteriaProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */; };
+		AA96FE1D29DEC31D006F3959 /* Vald.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE1C29DEC31D006F3959 /* Vald.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0E74BC29E12E2600063419 /* CriteriaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaResult.swift; sourceTree = "<group>"; };
+		AA0E74BE29E1554000063419 /* Optimist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optimist.swift; sourceTree = "<group>"; };
+		AA0E74C029E1805500063419 /* Bayes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bayes.swift; sourceTree = "<group>"; };
+		AA0E74C229E27A8700063419 /* Laplas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laplas.swift; sourceTree = "<group>"; };
+		AA0E74C429E27E6600063419 /* Gurvic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gurvic.swift; sourceTree = "<group>"; };
+		AA0E74C629E2837000063419 /* Savidgh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savidgh.swift; sourceTree = "<group>"; };
+		AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaddlePoint.swift; sourceTree = "<group>"; };
+		AA7328AB29DFBC6A007ABE02 /* ProbabilitiesInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilitiesInputView.swift; sourceTree = "<group>"; };
+		AA7328AD29E06BC3007ABE02 /* InputMatrixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMatrixViewController.swift; sourceTree = "<group>"; };
+		AA7328B129E119F6007ABE02 /* MatrixInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInputView.swift; sourceTree = "<group>"; };
 		AA96FE0229DEBFB9006F3959 /* MME_Lab_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MME_Lab_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA96FE0529DEBFB9006F3959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA96FE0929DEBFB9006F3959 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA96FE0C29DEBFB9006F3959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA96FE0929DEBFB9006F3959 /* ParamsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsInputViewController.swift; sourceTree = "<group>"; };
 		AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AA96FE1129DEBFBA006F3959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA96FE1329DEBFBA006F3959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaProcessor.swift; sourceTree = "<group>"; };
+		AA96FE1C29DEC31D006F3959 /* Vald.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vald.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA7328AF29E06BCE007ABE02 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA7328AD29E06BC3007ABE02 /* InputMatrixViewController.swift */,
+				AA96FE0929DEBFB9006F3959 /* ParamsInputViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA7328B029E06BE3007ABE02 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AA7328AB29DFBC6A007ABE02 /* ProbabilitiesInputView.swift */,
+				AA7328B129E119F6007ABE02 /* MatrixInputView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		AA96FDF929DEBFB9006F3959 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +94,31 @@
 		AA96FE0429DEBFB9006F3959 /* MME_Lab_1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA7328AF29E06BCE007ABE02 /* ViewControllers */,
+				AA96FE1B29DEC2C6006F3959 /* Criterias */,
+				AA7328B029E06BE3007ABE02 /* CustomViews */,
 				AA96FE0529DEBFB9006F3959 /* AppDelegate.swift */,
 				AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */,
-				AA96FE0929DEBFB9006F3959 /* ViewController.swift */,
-				AA96FE0B29DEBFB9006F3959 /* Main.storyboard */,
 				AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */,
-				AA96FE1029DEBFBA006F3959 /* LaunchScreen.storyboard */,
 				AA96FE1329DEBFBA006F3959 /* Info.plist */,
 			);
 			path = MME_Lab_1;
+			sourceTree = "<group>";
+		};
+		AA96FE1B29DEC2C6006F3959 /* Criterias */ = {
+			isa = PBXGroup;
+			children = (
+				AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */,
+				AA0E74BC29E12E2600063419 /* CriteriaResult.swift */,
+				AA96FE1C29DEC31D006F3959 /* Vald.swift */,
+				AA0E74BE29E1554000063419 /* Optimist.swift */,
+				AA0E74C029E1805500063419 /* Bayes.swift */,
+				AA0E74C229E27A8700063419 /* Laplas.swift */,
+				AA0E74C429E27E6600063419 /* Gurvic.swift */,
+				AA0E74C629E2837000063419 /* Savidgh.swift */,
+				AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */,
+			);
+			path = Criterias;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA96FE1229DEBFBA006F3959 /* LaunchScreen.storyboard in Resources */,
 				AA96FE0F29DEBFBA006F3959 /* Assets.xcassets in Resources */,
-				AA96FE0D29DEBFB9006F3959 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +190,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA96FE0A29DEBFB9006F3959 /* ViewController.swift in Sources */,
+				AA0E74CB29E3CF1000063419 /* SaddlePoint.swift in Sources */,
+				AA0E74BD29E12E2600063419 /* CriteriaResult.swift in Sources */,
+				AA7328B229E119F6007ABE02 /* MatrixInputView.swift in Sources */,
+				AA96FE0A29DEBFB9006F3959 /* ParamsInputViewController.swift in Sources */,
+				AA7328AE29E06BC3007ABE02 /* InputMatrixViewController.swift in Sources */,
 				AA96FE0629DEBFB9006F3959 /* AppDelegate.swift in Sources */,
+				AA96FE1D29DEC31D006F3959 /* Vald.swift in Sources */,
+				AA0E74BF29E1554000063419 /* Optimist.swift in Sources */,
+				AA96FE1A29DEC2B0006F3959 /* CriteriaProcessor.swift in Sources */,
+				AA0E74C329E27A8700063419 /* Laplas.swift in Sources */,
 				AA96FE0829DEBFB9006F3959 /* SceneDelegate.swift in Sources */,
+				AA7328AC29DFBC6A007ABE02 /* ProbabilitiesInputView.swift in Sources */,
+				AA0E74C529E27E6600063419 /* Gurvic.swift in Sources */,
+				AA0E74C729E2837000063419 /* Savidgh.swift in Sources */,
+				AA0E74C129E1805500063419 /* Bayes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AA96FE0B29DEBFB9006F3959 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA96FE0C29DEBFB9006F3959 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AA96FE1029DEBFBA006F3959 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA96FE1129DEBFBA006F3959 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AA96FE1429DEBFBA006F3959 /* Debug */ = {
@@ -292,7 +337,6 @@
 				INFOPLIST_FILE = MME_Lab_1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +364,6 @@
 				INFOPLIST_FILE = MME_Lab_1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
