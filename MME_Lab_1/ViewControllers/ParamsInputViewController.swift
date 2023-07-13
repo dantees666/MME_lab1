@@ -214,9 +214,11 @@ extension ParamsInputViewController {
             return
         }
         
+        let params = processParameters()
+        
         UIButton.animate(withDuration: 0.2, animations: { [weak self] in
             self?.additionParametersSubmition.alpha = 0.5
-            self?.showMatrixInput()
+            self?.showMatrixInput(params)
             self?.additionParametersSubmition.alpha = 1
         })
     }
@@ -229,12 +231,12 @@ extension ParamsInputViewController {
         alphaHint.topAnchor.constraint(equalTo: probabilitiesInput.bottomAnchor, constant: 20).isActive = true
     }
     
-    func showMatrixInput() {
+    func showMatrixInput(_ params: ([Double], Double)) {
         let vc = InputMatrixViewController(
             rowCount: matrixSizePicker.selectedRow(inComponent: 0) ,
             columnCount: matrixSizePicker.selectedRow(inComponent: 1),
-            alpha: 1,
-            chances: [1]
+            alpha: params.1,
+            chances: params.0
         )
         vc.view.backgroundColor = .white
         navigationController?.pushViewController(vc, animated: true)
@@ -244,8 +246,7 @@ extension ParamsInputViewController {
         var sumChance = 0.0
         
         for chanceLabel in probabilitiesInput.stackView.arrangedSubviews {
-            guard
-                let chanceNumber = (chanceLabel as! UITextField).text else { return false }
+            guard let chanceNumber = (chanceLabel as! UITextField).text else { return false }
             if
                 chanceNumber == "" ||
                 Double(chanceNumber) == nil ||
@@ -277,6 +278,17 @@ extension ParamsInputViewController {
         } else {
             return true
         }
+    }
+    
+    func processParameters() -> ([Double], Double) {
+        var chances: [Double] = []
+        
+        for chanceLabel in probabilitiesInput.stackView.arrangedSubviews {
+            guard let chanceNumber = (chanceLabel as! UITextField).text else { return  ([], 0) }
+            chances.append(Double(chanceNumber)!)
+        }
+        
+        return (chances, Double(alphaInput.text!)!)
     }
 }
 
