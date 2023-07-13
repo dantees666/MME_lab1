@@ -195,7 +195,24 @@ extension ParamsInputViewController {
     }
     
     @objc func startMatrixInput() {
-        guard checkIsAlphaCorrect(), checkIsChancesCorrect() else { return }
+        guard checkIsChancesCorrect(), checkIsAlphaCorrect() else {
+            let alert = UIAlertController(
+                title: "Incorrect parameters",
+                message: "Please, check you input parameters",
+                preferredStyle: .alert
+            )
+            alert.addAction(
+                UIAlertAction(
+                    title: NSLocalizedString(
+                        "OK",
+                        comment: "Default action"
+                    ),
+                    style: .default
+                )
+            )
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         
         UIButton.animate(withDuration: 0.2, animations: { [weak self] in
             self?.additionParametersSubmition.alpha = 0.5
@@ -223,32 +240,43 @@ extension ParamsInputViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func checkIsChancesCorrect() -> Bool {
+        var sumChance = 0.0
+        
+        for chanceLabel in probabilitiesInput.stackView.arrangedSubviews {
+            guard
+                let chanceNumber = (chanceLabel as! UITextField).text else { return false }
+            if
+                chanceNumber == "" ||
+                Double(chanceNumber) == nil ||
+                Double(chanceNumber)! < 0 ||
+                Double(chanceNumber)! > 1
+            {
+                return false
+            } else {
+                sumChance += Double(chanceNumber)!
+            }
+        }
+        
+        if sumChance == 1 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func checkIsAlphaCorrect() -> Bool {
+        guard let alphaNumber = alphaInput.text else { return false }
         if
-            alphaInput.text! == "" ||
-            alphaInput.text!.contains("[^d.]") ||
-            Double(alphaInput.text!)! < 0 ||
-            Double(alphaInput.text!)! > 1
+            alphaNumber == "" ||
+            Double(alphaNumber) == nil ||
+            Double(alphaNumber)! < 0 ||
+            Double(alphaNumber)! > 1
         {
             return false
         } else {
             return true
         }
-    }
-    
-    func checkIsChancesCorrect() -> Bool {
-        for chanceLabel in probabilitiesInput.stackView.arrangedSubviews {
-            let chanceNumber = chanceLabel as! UITextField
-            if
-                chanceNumber.text! == "" ||
-                chanceNumber.text!.contains("[^d.]") ||
-                Double(chanceNumber.text!)! < 0 ||
-                Double(chanceNumber.text!)! > 1
-            {
-                return false
-            }
-        }
-        return true
     }
 }
 
