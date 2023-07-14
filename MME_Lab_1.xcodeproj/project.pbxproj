@@ -57,6 +57,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA2C7BA42A60078C008FA105 /* CriteriaReaizations */ = {
+			isa = PBXGroup;
+			children = (
+				AA96FE1C29DEC31D006F3959 /* Vald.swift */,
+				AA0E74BE29E1554000063419 /* Optimist.swift */,
+				AA0E74C029E1805500063419 /* Bayes.swift */,
+				AA0E74C229E27A8700063419 /* Laplas.swift */,
+				AA0E74C429E27E6600063419 /* Gurvic.swift */,
+				AA0E74C629E2837000063419 /* Savidgh.swift */,
+			);
+			path = CriteriaReaizations;
+			sourceTree = "<group>";
+		};
+		AA2C7BA52A6007F3008FA105 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AA2C7BA62A600810008FA105 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				AA0E74BC29E12E2600063419 /* CriteriaResult.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		AA7328AF29E06BCE007ABE02 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				AA7328AF29E06BCE007ABE02 /* ViewControllers */,
-				AA96FE1B29DEC2C6006F3959 /* Criterias */,
 				AA7328B029E06BE3007ABE02 /* CustomViews */,
+				AA2C7BA52A6007F3008FA105 /* Protocols */,
+				AA2C7BA62A600810008FA105 /* Structs */,
+				AA96FE1B29DEC2C6006F3959 /* Criterias */,
 				AA96FE0529DEBFB9006F3959 /* AppDelegate.swift */,
 				AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */,
 				AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */,
@@ -108,15 +139,8 @@
 		AA96FE1B29DEC2C6006F3959 /* Criterias */ = {
 			isa = PBXGroup;
 			children = (
-				AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */,
-				AA0E74BC29E12E2600063419 /* CriteriaResult.swift */,
-				AA96FE1C29DEC31D006F3959 /* Vald.swift */,
-				AA0E74BE29E1554000063419 /* Optimist.swift */,
-				AA0E74C029E1805500063419 /* Bayes.swift */,
-				AA0E74C229E27A8700063419 /* Laplas.swift */,
-				AA0E74C429E27E6600063419 /* Gurvic.swift */,
-				AA0E74C629E2837000063419 /* Savidgh.swift */,
 				AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */,
+				AA2C7BA42A60078C008FA105 /* CriteriaReaizations */,
 			);
 			path = Criterias;
 			sourceTree = "<group>";

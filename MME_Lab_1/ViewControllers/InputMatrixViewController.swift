@@ -18,7 +18,7 @@ class InputMatrixViewController: UIViewController {
     let alpha: Double
     let chances: [Double]
     
-    var gameMatrix: [[Double]] = [[]]
+    var gameMatrix: [[Double]] = []
     
     init(rowCount: Int, columnCount: Int, alpha: Double, chances: [Double]) {
         self.rowCount = rowCount
@@ -92,7 +92,8 @@ extension InputMatrixViewController {
             return
         }
         
-        print("It's OK")
+        fillMatrix()
+        print(gameMatrix)
     }
 }
 
@@ -124,5 +125,29 @@ extension InputMatrixViewController {
             }
         }
         return true
+    }
+    
+    func fillMatrix() {
+        gameMatrix.removeAll()
+        
+        for matrixRow in 0...rowCount {
+            var row: [Double] = []
+            for matrixColumn in 0...columnCount {
+                guard
+                    let matrixElement = ((
+                        matrixInputView.matrixStackVIew
+                            .arrangedSubviews[matrixRow] as! UIStackView
+                    )
+                        .arrangedSubviews[matrixColumn] as! UITextField)
+                        .text
+                else {
+                    return
+                }
+                
+                row.append(Double(matrixElement)!)
+            }
+            
+            gameMatrix.append(row)
+        }
     }
 }
