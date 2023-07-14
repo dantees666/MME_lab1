@@ -7,10 +7,8 @@
 
 import Foundation
 
-class Savidgh: CriteriaProcessor {
-    let matrix: [[Double]] = [[5, 5, 7], [3, 4, 6], [2, 4, 8]]
-    
-    func countCriteriaWinning() -> CriteriaResult {
+extension CriteriaProcessor {
+    func countSavidghWinning() -> CriteriaResult {
         let maxesInColumn = matrix.first!.enumerated().map { column in
             matrix.map {
                 $0[column.offset]
@@ -26,7 +24,7 @@ class Savidgh: CriteriaProcessor {
         return CriteriaResult(strategiesResult: resultList, result: Int(resultList.min()!))
     }
     
-    func countCriteriaLoosing() -> CriteriaResult {
+    func countSavidghLoosing() -> CriteriaResult {
         let maxesInColumn = matrix.first!.enumerated().map { column in
             matrix.map {
                 $0[column.offset]

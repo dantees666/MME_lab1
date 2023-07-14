@@ -7,17 +7,15 @@
 
 import Foundation
 
-class Optimist: CriteriaProcessor {
-    let matrix: [[Double]] = [[5,5,7],[3,4,6],[2,4,8]]
-    
-    func countCriteriaWinning() -> CriteriaResult {
+extension CriteriaProcessor {
+    func countOptimistWinning() -> CriteriaResult {
         let maxes = matrix.map { $0.max()! }
         let result = maxes.firstIndex(of: maxes.max()!)!
         
         return CriteriaResult(strategiesResult: maxes, result: result)
     }
     
-    func countCriteriaLoosing() -> CriteriaResult {
+    func countOptimistLoosing() -> CriteriaResult {
         let mins = matrix.map { $0.min()! }
         let result = mins.firstIndex(of: mins.min()!)!
         

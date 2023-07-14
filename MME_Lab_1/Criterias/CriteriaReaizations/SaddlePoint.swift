@@ -7,10 +7,8 @@
 
 import Foundation
 
-class SaddlePoint {
-    let matrix: [[Double]] = [[5, 5, 7], [3, 4, 6], [2, 4, 8]]
-    
-    func countSaddlePointWinning() -> [(Int, Int)]? {
+extension CriteriaProcessor {
+    func countSaddlePoint() -> [(Int, Int)]? {
         let lowerValue = matrix.map {
             $0.min()!
         }.max()!

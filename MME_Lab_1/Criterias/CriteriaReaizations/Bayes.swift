@@ -7,11 +7,8 @@
 
 import Foundation
 
-class Bayes: CriteriaProcessor {
-    let matrix: [[Double]] = [[5, 5, 7], [3, 4, 6], [2, 4, 8]]
-    let chances: [Double] = [0.5, 0.4, 0.1]
-    
-    func countCriteriaWinning() -> CriteriaResult {
+extension CriteriaProcessor {    
+    func countBayesWinning() -> CriteriaResult {
         let resultList = matrix.map{
             $0.enumerated().reduce(0) {
                 $0 + $1.element * chances[$1.offset]
@@ -23,7 +20,7 @@ class Bayes: CriteriaProcessor {
         return CriteriaResult(strategiesResult: resultList, result: result)
     }
     
-    func countCriteriaLoosing() -> CriteriaResult {
+    func countBayesLoosing() -> CriteriaResult {
         let resultList = matrix.map{
             $0.enumerated().reduce(0) {
                 $0 + $1.element * chances[$1.offset]

@@ -7,14 +7,12 @@
 
 import Foundation
 
-class Laplas: CriteriaProcessor {
-    let matrix: [[Double]] = [[5, 5, 7], [3, 4, 6], [2, 4, 8]]
-    
+extension CriteriaProcessor {
     var chance: Double {
         return (1 / Double(matrix.first!.count) * 100).rounded() / 100
     }
     
-    func countCriteriaWinning() -> CriteriaResult {
+    func countLaplasWinning() -> CriteriaResult {
         let resultList = matrix.map{
             $0.reduce(0) {
                 $0 + $1 * chance
@@ -26,7 +24,7 @@ class Laplas: CriteriaProcessor {
         return CriteriaResult(strategiesResult: resultList, result: result)
     }
     
-    func countCriteriaLoosing() -> CriteriaResult {
+    func countLaplasLoosing() -> CriteriaResult {
         let resultList = matrix.map{
             $0.reduce(0) {
                 $0 + $1 * chance

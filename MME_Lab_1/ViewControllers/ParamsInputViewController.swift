@@ -234,6 +234,7 @@ extension ParamsInputViewController {
         let vc = InputMatrixViewController(
             rowCount: matrixSizePicker.selectedRow(inComponent: 0) ,
             columnCount: matrixSizePicker.selectedRow(inComponent: 1),
+            isWinning: isWinningMatrixChecker.isOn,
             alpha: params.1,
             chances: params.0
         )

@@ -15,14 +15,16 @@ class InputMatrixViewController: UIViewController {
     
     let rowCount: Int
     let columnCount: Int
+    let isWinning: Bool
     let alpha: Double
     let chances: [Double]
     
     var gameMatrix: [[Double]] = []
     
-    init(rowCount: Int, columnCount: Int, alpha: Double, chances: [Double]) {
+    init(rowCount: Int, columnCount: Int, isWinning: Bool, alpha: Double, chances: [Double]) {
         self.rowCount = rowCount
         self.columnCount = columnCount
+        self.isWinning = isWinning
         self.alpha = alpha
         self.chances = chances
         
@@ -94,6 +96,25 @@ extension InputMatrixViewController {
         
         fillMatrix()
         print(gameMatrix)
+        
+        print("-------------------------------------")
+        
+        let answer = CriteriaProcessor(matrix: gameMatrix, chances: chances, alpha: alpha)
+        
+        print("Bayes:")
+        print(answer.countBayesWinning())
+        print("Vald:")
+        print(answer.countValdWinning())
+        print("Saddle:")
+        print(answer.countSaddlePoint() ?? "no saddle")
+        print("Optimist:")
+        print(answer.countOptimistWinning())
+        print("Laplas:")
+        print(answer.countLaplasWinning())
+        print("Gurvic:")
+        print(answer.countGurvicWinning())
+        print("Savidgh:")
+        print(answer.countSavidghWinning())
     }
 }
 
