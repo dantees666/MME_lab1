@@ -170,7 +170,6 @@ extension ParamsInputViewController {
     }
 }
 
-
 // MARK: - Methods for buttons actions
 
 extension ParamsInputViewController {

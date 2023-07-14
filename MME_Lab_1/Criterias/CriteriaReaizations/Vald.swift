@@ -8,7 +8,7 @@
 import Foundation
 
 class Vald: CriteriaProcessor {
-    let matrix: [[Double]] = [[5,5,7],[3,4,6],[2,4,8]]
+    let matrix: [[Double]] = [[5,5,7], [3,4,6], [2,4,8]]
     
     func countCriteriaWinning() -> CriteriaResult {
         let mins = matrix.map { $0.min()! }
