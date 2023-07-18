@@ -14,6 +14,8 @@
 		AA0E74C529E27E6600063419 /* Gurvic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C429E27E6600063419 /* Gurvic.swift */; };
 		AA0E74C729E2837000063419 /* Savidgh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74C629E2837000063419 /* Savidgh.swift */; };
 		AA0E74CB29E3CF1000063419 /* SaddlePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */; };
+		AA2C7BAB2A626D52008FA105 /* CriteriasNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C7BAA2A626D52008FA105 /* CriteriasNames.swift */; };
+		AA2C7BAE2A627B5C008FA105 /* Criterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C7BAD2A627B5C008FA105 /* Criterias.swift */; };
 		AA7328AC29DFBC6A007ABE02 /* ProbabilitiesInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328AB29DFBC6A007ABE02 /* ProbabilitiesInputView.swift */; };
 		AA7328AE29E06BC3007ABE02 /* InputMatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328AD29E06BC3007ABE02 /* InputMatrixViewController.swift */; };
 		AA7328B229E119F6007ABE02 /* MatrixInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7328B129E119F6007ABE02 /* MatrixInputView.swift */; };
@@ -21,7 +23,6 @@
 		AA96FE0829DEBFB9006F3959 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */; };
 		AA96FE0A29DEBFB9006F3959 /* ParamsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE0929DEBFB9006F3959 /* ParamsInputViewController.swift */; };
 		AA96FE0F29DEBFBA006F3959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */; };
-		AA96FE1A29DEC2B0006F3959 /* CriteriaProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */; };
 		AA96FE1D29DEC31D006F3959 /* Vald.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96FE1C29DEC31D006F3959 /* Vald.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		AA0E74C429E27E6600063419 /* Gurvic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gurvic.swift; sourceTree = "<group>"; };
 		AA0E74C629E2837000063419 /* Savidgh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savidgh.swift; sourceTree = "<group>"; };
 		AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaddlePoint.swift; sourceTree = "<group>"; };
+		AA2C7BAA2A626D52008FA105 /* CriteriasNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriasNames.swift; sourceTree = "<group>"; };
+		AA2C7BAD2A627B5C008FA105 /* Criterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Criterias.swift; sourceTree = "<group>"; };
 		AA7328AB29DFBC6A007ABE02 /* ProbabilitiesInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilitiesInputView.swift; sourceTree = "<group>"; };
 		AA7328AD29E06BC3007ABE02 /* InputMatrixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMatrixViewController.swift; sourceTree = "<group>"; };
 		AA7328B129E119F6007ABE02 /* MatrixInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInputView.swift; sourceTree = "<group>"; };
@@ -42,7 +45,6 @@
 		AA96FE0929DEBFB9006F3959 /* ParamsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsInputViewController.swift; sourceTree = "<group>"; };
 		AA96FE0E29DEBFBA006F3959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA96FE1329DEBFBA006F3959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaProcessor.swift; sourceTree = "<group>"; };
 		AA96FE1C29DEC31D006F3959 /* Vald.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vald.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				AA96FE1C29DEC31D006F3959 /* Vald.swift */,
+				AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */,
 				AA0E74BE29E1554000063419 /* Optimist.swift */,
 				AA0E74C029E1805500063419 /* Bayes.swift */,
 				AA0E74C229E27A8700063419 /* Laplas.swift */,
@@ -70,20 +73,28 @@
 			path = CriteriaReaizations;
 			sourceTree = "<group>";
 		};
-		AA2C7BA52A6007F3008FA105 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				AA96FE1929DEC2B0006F3959 /* CriteriaProcessor.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		AA2C7BA62A600810008FA105 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
 				AA0E74BC29E12E2600063419 /* CriteriaResult.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		AA2C7BA92A626D20008FA105 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C7BAA2A626D52008FA105 /* CriteriasNames.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		AA2C7BAC2A627B3B008FA105 /* Dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C7BAD2A627B5C008FA105 /* Criterias.swift */,
+			);
+			path = Dictionaries;
 			sourceTree = "<group>";
 		};
 		AA7328AF29E06BCE007ABE02 /* ViewControllers */ = {
@@ -123,10 +134,11 @@
 		AA96FE0429DEBFB9006F3959 /* MME_Lab_1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA2C7BAC2A627B3B008FA105 /* Dictionaries */,
+				AA2C7BA92A626D20008FA105 /* Enums */,
+				AA2C7BA62A600810008FA105 /* Structs */,
 				AA7328AF29E06BCE007ABE02 /* ViewControllers */,
 				AA7328B029E06BE3007ABE02 /* CustomViews */,
-				AA2C7BA52A6007F3008FA105 /* Protocols */,
-				AA2C7BA62A600810008FA105 /* Structs */,
 				AA96FE1B29DEC2C6006F3959 /* Criterias */,
 				AA96FE0529DEBFB9006F3959 /* AppDelegate.swift */,
 				AA96FE0729DEBFB9006F3959 /* SceneDelegate.swift */,
@@ -139,7 +151,6 @@
 		AA96FE1B29DEC2C6006F3959 /* Criterias */ = {
 			isa = PBXGroup;
 			children = (
-				AA0E74CA29E3CF1000063419 /* SaddlePoint.swift */,
 				AA2C7BA42A60078C008FA105 /* CriteriaReaizations */,
 			);
 			path = Criterias;
@@ -222,7 +233,8 @@
 				AA96FE0629DEBFB9006F3959 /* AppDelegate.swift in Sources */,
 				AA96FE1D29DEC31D006F3959 /* Vald.swift in Sources */,
 				AA0E74BF29E1554000063419 /* Optimist.swift in Sources */,
-				AA96FE1A29DEC2B0006F3959 /* CriteriaProcessor.swift in Sources */,
+				AA2C7BAB2A626D52008FA105 /* CriteriasNames.swift in Sources */,
+				AA2C7BAE2A627B5C008FA105 /* Criterias.swift in Sources */,
 				AA0E74C329E27A8700063419 /* Laplas.swift in Sources */,
 				AA96FE0829DEBFB9006F3959 /* SceneDelegate.swift in Sources */,
 				AA7328AC29DFBC6A007ABE02 /* ProbabilitiesInputView.swift in Sources */,
@@ -359,10 +371,12 @@
 				DEVELOPMENT_TEAM = X2ZM945K9W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MME_Lab_1/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,9 +384,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "qwezxc.MME-Lab-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,10 +403,12 @@
 				DEVELOPMENT_TEAM = X2ZM945K9W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MME_Lab_1/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,9 +416,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "qwezxc.MME-Lab-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
