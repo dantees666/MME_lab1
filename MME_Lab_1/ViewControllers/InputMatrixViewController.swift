@@ -40,6 +40,7 @@ class InputMatrixViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addObserversForKeyboard()
         createMatrixInput()
         createConfirmMatrixButton()
     }
@@ -132,6 +133,15 @@ extension InputMatrixViewController {
 // MARK: - Auxiliarry methods
 
 extension InputMatrixViewController {
+    func addObserversForKeyboard() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     func checkIsMatrixinputCorrect() -> Bool {
         for matrixRow in 0...rowCount {
             for matrixColumn in 0...columnCount {
