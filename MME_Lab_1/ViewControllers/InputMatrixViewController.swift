@@ -13,6 +13,9 @@ class InputMatrixViewController: UIViewController {
     
     var confirmMatrixButton: UIButton!
     
+    var saddlePointTextField: UITextField!
+    var answerTableView: UITableView!
+    
     let rowCount: Int
     let columnCount: Int
     let isWinning: Bool
@@ -69,6 +72,32 @@ extension InputMatrixViewController {
         confirmMatrixButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         confirmMatrixButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
+    
+    func createSaddlePointTextField() {
+        saddlePointTextField = UITextField()
+        saddlePointTextField.translatesAutoresizingMaskIntoConstraints = false
+        saddlePointTextField.isEnabled = false
+        saddlePointTextField.text = fillSaddlePoint()
+        view.addSubview(saddlePointTextField)
+        
+        saddlePointTextField.topAnchor.constraint(equalTo: confirmMatrixButton.bottomAnchor, constant: 50).isActive = true
+        saddlePointTextField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        saddlePointTextField.widthAnchor.constraint(equalToConstant: 300).isActive = true
+    }
+    
+    func createAnswerTableView() {
+        answerTableView = UITableView()
+        answerTableView.translatesAutoresizingMaskIntoConstraints = false
+        answerTableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactCell")
+        answerTableView.dataSource = self
+        answerTableView.delegate = self
+        view.addSubview(answerTableView)
+        
+        answerTableView.topAnchor.constraint(equalTo: saddlePointTextField.bottomAnchor, constant: 50).isActive = true
+        answerTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        answerTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+        answerTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+    }
 }
 
 // MARK: - Methods for buttons actions
@@ -95,26 +124,8 @@ extension InputMatrixViewController {
         }
         
         fillMatrix()
-        print(gameMatrix)
-        
-        print("-------------------------------------")
-        
-        let answer = CriteriaProcessor(matrix: gameMatrix, chances: chances, alpha: alpha)
-        
-        print("Bayes:")
-        print(answer.countBayesWinning())
-        print("Vald:")
-        print(answer.countValdWinning())
-        print("Saddle:")
-        print(answer.countSaddlePoint() ?? "no saddle")
-        print("Optimist:")
-        print(answer.countOptimistWinning())
-        print("Laplas:")
-        print(answer.countLaplasWinning())
-        print("Gurvic:")
-        print(answer.countGurvicWinning())
-        print("Savidgh:")
-        print(answer.countSavidghWinning())
+        createSaddlePointTextField()
+        createAnswerTableView()
     }
 }
 
@@ -170,5 +181,77 @@ extension InputMatrixViewController {
             
             gameMatrix.append(row)
         }
+    }
+    
+    func fillSaddlePoint() -> String {
+        guard let saddlePoint = countSaddlePoint() else {
+            return "No saddle point"
+        }
+        
+        return "Saddle point: \(saddlePoint)"
+    }
+    
+    func fillAnswerTableView(_ criteriaIndex: Int) -> String {
+        switch isWinning {
+        case true:
+            let result = getWinningResult(CriteriasNames(rawValue: criteriaIndex)!)
+            return "\(CriteriasNames(rawValue: criteriaIndex)!.stringRepresentation) best strategy = \(result.result)\nresult = \(result.strategiesResult)"
+        case false:
+            let result = getLoosingResult(CriteriasNames(rawValue: criteriaIndex)!)
+            return "\(CriteriasNames(rawValue: criteriaIndex)!.stringRepresentation) best strategy = \(result.result)\nresult = \(result.strategiesResult)"
+        }
+    }
+    
+    func getWinningResult(_ criteriaName: CriteriasNames) -> CriteriaResult {
+        switch criteriaName {
+        case .vald:
+            return countValdWinning()
+        case .gurvic:
+            return countGurvicWinning()
+        case .laplas:
+            return countLaplasWinning()
+        case .savidgh:
+            return countSavidghWinning()
+        case .optimist:
+            return countOptimistWinning()
+        case .bayes:
+            return countBayesWinning()
+        }
+    }
+    
+    func getLoosingResult(_ criteriaName: CriteriasNames) -> CriteriaResult {
+        switch criteriaName {
+        case .vald:
+            return countValdLoosing()
+        case .gurvic:
+            return countGurvicLoosing()
+        case .laplas:
+            return countLaplasLoosing()
+        case .savidgh:
+            return countSavidghLoosing()
+        case .optimist:
+            return countOptimistLoosing()
+        case .bayes:
+            return countBayesLoosing()
+        }
+    }
+}
+
+extension InputMatrixViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size: 20)
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.text = fillAnswerTableView(indexPath.row)
+          return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        answerTableView.frame.height / 6
     }
 }

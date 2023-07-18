@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension CriteriaProcessor {    
+extension InputMatrixViewController {    
     func countBayesWinning() -> CriteriaResult {
-        let resultList = matrix.map{
+        let resultList = gameMatrix.map{
             $0.enumerated().reduce(0) {
                 $0 + $1.element * chances[$1.offset]
             }
@@ -21,7 +21,7 @@ extension CriteriaProcessor {
     }
     
     func countBayesLoosing() -> CriteriaResult {
-        let resultList = matrix.map{
+        let resultList = gameMatrix.map{
             $0.enumerated().reduce(0) {
                 $0 + $1.element * chances[$1.offset]
             }

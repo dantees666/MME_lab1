@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension CriteriaProcessor {
+extension InputMatrixViewController {
     func countGurvicWinning() -> CriteriaResult {
-        let resultList = matrix.map {
+        let resultList = gameMatrix.map {
             ((alpha * $0.min()! + (1 - alpha) * $0.max()!) * 100).rounded() / 100
         }
         
@@ -17,7 +17,7 @@ extension CriteriaProcessor {
     }
     
     func countGurvicLoosing() -> CriteriaResult {
-            let resultList = matrix.map {
+            let resultList = gameMatrix.map {
                 ((alpha * $0.max()! + (1 - alpha) * $0.min()!) * 100).rounded() / 100
             }
             

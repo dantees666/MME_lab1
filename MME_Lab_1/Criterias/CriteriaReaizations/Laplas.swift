@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension CriteriaProcessor {
+extension InputMatrixViewController {
     var chance: Double {
-        return (1 / Double(matrix.first!.count) * 100).rounded() / 100
+        return (1 / Double(gameMatrix.first!.count) * 100).rounded() / 100
     }
     
     func countLaplasWinning() -> CriteriaResult {
-        let resultList = matrix.map{
+        let resultList = gameMatrix.map{
             $0.reduce(0) {
                 $0 + $1 * chance
             }
@@ -25,7 +25,7 @@ extension CriteriaProcessor {
     }
     
     func countLaplasLoosing() -> CriteriaResult {
-        let resultList = matrix.map{
+        let resultList = gameMatrix.map{
             $0.reduce(0) {
                 $0 + $1 * chance
             }

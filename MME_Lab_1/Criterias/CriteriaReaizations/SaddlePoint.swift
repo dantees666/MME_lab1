@@ -7,14 +7,14 @@
 
 import Foundation
 
-extension CriteriaProcessor {
+extension InputMatrixViewController {
     func countSaddlePoint() -> [(Int, Int)]? {
-        let lowerValue = matrix.map {
+        let lowerValue = gameMatrix.map {
             $0.min()!
         }.max()!
         
-        let upperValue = matrix.first!.enumerated().map { column in
-            matrix.map {
+        let upperValue = gameMatrix.first!.enumerated().map { column in
+            gameMatrix.map {
                 $0[column.offset]
             }.max()!
         }.min()!
@@ -29,7 +29,7 @@ extension CriteriaProcessor {
     func getMatrixElementIndex(element: Double) -> [(Int, Int)] {
         var saddlePointIndexes: [(Int, Int)] = []
         
-        let saddlePointIndexesList = matrix.enumerated().map {
+        let saddlePointIndexesList = gameMatrix.enumerated().map {
             $0.element.enumerated().filter {
                 $0.element == element
             }

@@ -7,16 +7,16 @@
 
 import Foundation
 
-extension CriteriaProcessor {
+extension InputMatrixViewController {
     func countValdWinning() -> CriteriaResult {
-        let mins = matrix.map { $0.min()! }
+        let mins = gameMatrix.map { $0.min()! }
         let result = mins.firstIndex(of: mins.max()!)!
         
         return CriteriaResult(strategiesResult: mins, result: result)
     }
     
     func countValdLoosing() -> CriteriaResult {
-        let maxes = matrix.map { $0.max()! }
+        let maxes = gameMatrix.map { $0.max()! }
         let result = maxes.firstIndex(of: maxes.min()!)!
         
         return CriteriaResult(strategiesResult: maxes, result: result)

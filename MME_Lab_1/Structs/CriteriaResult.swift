@@ -10,9 +10,4 @@ import Foundation
 struct CriteriaResult {
     var strategiesResult: [Double]
     var result: Int
-    
-    init(strategiesResult: [Double], result: Int) {
-        self.strategiesResult = strategiesResult
-        self.result = result
-    }
 }

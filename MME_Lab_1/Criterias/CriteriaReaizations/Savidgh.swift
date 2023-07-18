@@ -7,15 +7,15 @@
 
 import Foundation
 
-extension CriteriaProcessor {
+extension InputMatrixViewController {
     func countSavidghWinning() -> CriteriaResult {
-        let maxesInColumn = matrix.first!.enumerated().map { column in
-            matrix.map {
+        let maxesInColumn = gameMatrix.first!.enumerated().map { column in
+            gameMatrix.map {
                 $0[column.offset]
             }.max()!
         }
         
-        let resultList = matrix.map { column in
+        let resultList = gameMatrix.map { column in
             column.enumerated().map {
                 maxesInColumn[$0.offset] - $0.element
             }.max()!
@@ -25,13 +25,13 @@ extension CriteriaProcessor {
     }
     
     func countSavidghLoosing() -> CriteriaResult {
-        let maxesInColumn = matrix.first!.enumerated().map { column in
-            matrix.map {
+        let maxesInColumn = gameMatrix.first!.enumerated().map { column in
+            gameMatrix.map {
                 $0[column.offset]
             }.max()!
         }
         
-        let resultList = matrix.map { column in
+        let resultList = gameMatrix.map { column in
             column.enumerated().map {
                 maxesInColumn[$0.offset] - $0.element
             }.min()!
